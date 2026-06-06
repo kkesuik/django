@@ -1,0 +1,8 @@
+<a href={% url 'app:list' %}><h3>メンバー一覧</h3></a>
+<a href={% url 'app:form' %}><h3>メンバー追加</h3></a>
+<h1>送信フォーム</h1>
+<form action='/app/formset/' method="POST">
+{% csrf_token %}
+ {{ formset.as_p }}
+  <input type="submit" value="Submit"> 
+</form>
